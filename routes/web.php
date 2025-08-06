@@ -7,5 +7,7 @@ use App\Http\Controllers\StudentsController;
 //     return view('welcome');
 // });
 
+Route::get('/', [StudentsController::class, 'students'])->name('students');
+
 Route::get('/students', [StudentsController::class, 'students'])->name('students');
 Route::get('/students/{studentId}', [StudentsController::class, 'show'])->name('students.show'); 
